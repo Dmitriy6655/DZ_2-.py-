@@ -6,10 +6,18 @@
 
 print("Введите сумму двух чисел: ", end="")
 x = int(input())
+
 print("Введите произведение этих же чисел: ", end="")
 y = int(input())
+
+maxNum = 1000
+
+if x > maxNum or y > maxNum:
+    print("введены числа больше 1000")
+    exit()
 
 for i in range(x):
     for d in range(y):
         if x == i + d and y == i * d:
-            print(f"число 1 равно: {i}; число 2 равно: {d}")
+            print(f"Число 1 равно: {i}; число 2 равно: {d}")
+            exit()
